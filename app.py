@@ -13,10 +13,10 @@ def register_patient():
     data = request.get_json()
     patient = {
         'id': len(patients) + 1,
-        'nombre': data['nombre'],
-        'edad': data['edad'],
-        'medicacion': data['medicacion'],
-        'historial_glucosa': data['historial_glucosa']
+        'name': data['name'],
+        'age': data['age'],
+        'medication': data['medication'],
+        'glucose_history': data['glucose_history']
     }
     patients.append(patient)
     return jsonify(patient), 201
